@@ -22,22 +22,22 @@ docker run -d \
     -v /usr/share/nginx/html \
     -v /var/run/docker.sock:/tmp/docker.sock:ro \
     --label com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy=true \
-    jwilder/nginx-proxy
+    jwilder/nginx-proxy`
     
-    docker run -d \
+    `docker run -d \
     --name nginx-letsencrypt \
     --volumes-from nginx-proxy \
     -v $HOME/certs:/etc/nginx/certs:rw \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
-    jrcs/letsencrypt-nginx-proxy-companion
+    jrcs/letsencrypt-nginx-proxy-companion`
     
-    docker run -d \
+    `docker run -d \
     --name site-a \
     -e 'LETSENCRYPT_EMAIL=webmaster@example.com' \
     -e 'LETSENCRYPT_HOST=a.example.com' \
-    -e 'VIRTUAL_HOST=a.example.com' nginx
+    -e 'VIRTUAL_HOST=a.example.com' nginx`
     
-    docker run -d \
+    `docker run -d \
     --name site-b \
     -e 'LETSENCRYPT_EMAIL=webmaster@example.com' \
     -e 'LETSENCRYPT_HOST=b.example.com' \
