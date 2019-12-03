@@ -11,7 +11,7 @@ Proxy Containers (https://github.com/jwilder/nginx-proxy)
     docker run -d \
     --name nginx-proxy-https \
     -p 443:443 \
-    -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy`
+    -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
     
  Encrypted Proxy (https://cloud.google.com/community/tutorials/nginx-reverse-proxy-docker)
 
