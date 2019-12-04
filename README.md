@@ -42,4 +42,7 @@ Proxy Containers (https://github.com/jwilder/nginx-proxy)
     --name site-b \
     -e 'LETSENCRYPT_EMAIL=webmaster@example.com' \
     -e 'LETSENCRYPT_HOST=b.example.com' \
-    -e 'VIRTUAL_HOST=b.example.com' httpd
+    -e 'VIRTUAL_HOST=b.example.com' httpd`
+    
+MariaDB container
+    `docker run --name some-mariadb -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:tag`
