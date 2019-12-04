@@ -42,7 +42,7 @@ Proxy Containers (https://github.com/jwilder/nginx-proxy)
     --name site-b \
     -e 'LETSENCRYPT_EMAIL=webmaster@example.com' \
     -e 'LETSENCRYPT_HOST=b.example.com' \
-    -e 'VIRTUAL_HOST=b.example.com' httpd`
+    -e 'VIRTUAL_HOST=b.example.com' httpd
     
 MariaDB container (https://hub.docker.com/_/mariadb/)
 
