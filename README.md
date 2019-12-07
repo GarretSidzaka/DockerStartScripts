@@ -49,3 +49,8 @@ MariaDB container (https://hub.docker.com/_/mariadb/)
 
 
     docker run --name some-mariadb -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:tag
+    
+    
+Wordpress Container (https://hub.docker.com/_/wordpress/)
+    docker run --name some-wordpress -e WORDPRESS_DB_HOST=10.1.2.3:3306 \
+    -e WORDPRESS_DB_USER=... -e WORDPRESS_DB_PASSWORD=... -d wordpress
